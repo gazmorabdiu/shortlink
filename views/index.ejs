@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>URL Shortener</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <div class="sidebar">
+        <img src="./images/AnchorzUpLogo.png" alt="AnchorZup Logo">
+        <h2>My Shortened URLs</h2>
+        <div id="urlTableContainer">
+            <!-- Table will be dynamically injected here -->
+        </div>
+    </div>
+
+    <div class="content">
+        <h1><%= title %></h1>  <!-- Dynamically inserted title -->
+        <p><%= description %></p>  <!-- Dynamically inserted description -->
+        <div class="form-container">
+            <!-- Input field for the link name -->
+            <input type="text" name="linkName" placeholder="Paste the URL to be shortened">
+            
+            <!-- Dropdown for expiration options -->
+            <select name="expiresIn">
+                <option value="none">Add expiration date</option>
+                <option value="60">1 minute</option>
+                <option value="300">5 minutes</option>
+                <option value="1800">30 minutes</option>
+                <option value="3600">1 hour</option>
+                <option value="18000">5 hours</option>
+            </select>
+            
+            <!-- Button to shorten the URL -->
+            <button type="button" id="shortenUrlBtn">Shorten URL</button>
+        </div>
+    </div>
+
+    <script src="./js/queryLinks.js"></script>
+    <script src="./js/shortLink.js"></script>
+
+</body>
+</html>
